@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<!-- 여기서 실행 -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +9,7 @@
 </head>
 <body>
 <center>
-<form action="ResponseProc.jsp" method="get">
+<form action="j25_ResponseProc_result.jsp" method="get">
 	<table width="400" border="1">
 		<tr height="60">
 			<td align="center" width="150">아이디</td>
