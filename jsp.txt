@@ -13,3 +13,38 @@
 <%@ %> : 지시자
 <%! %> : 선언부(변수 선언, 메소드)
 <jsp:~~/> : 액션 태그
+
+request, session, page..
+
+setAttribute(name, value)
+->이름에 값을 설정하겠다.
+
+getAttribute(name)
+->이름에 설정된 값 얻어냄
+
+removeAttribute(name)
+
+RequestDispatcher
+:forward()메서드
+
+a.jsp로 요청했을 때 
+a.jsp에서 forward실행해서
+b.jsp로 제어넘김
+b.jsp로 결과를 브라우저에 넘김
+
+1. forward태그로 이동
+
+2. response -> sendredirect()
+
+3. RequestDispatcher
+->forward(request, response)메서드
+
+include
+forward
+
+태그
+<jsp:include~~>
+
+include 속성 => <%@ %>
+include 태그
+include 함수
