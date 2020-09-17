@@ -48,3 +48,20 @@ forward
 include 속성 => <%@ %>
 include 태그
 include 함수
+
+jsp: include
+jsp: forward
+jsp: param
+
+<jsp:forward page="이동경로">
+<jsp:param name="파라미터" value="파라미터값" />
+</jsp:forward>
+
+자바빈: 데이터 저장소(하나의 묶음으로 서버에 전송)
+모든 변수들은 private
+
+<%stu.setName(request.~~("name")
+<jsp:useBean> 자바빈 생성
+
+jsp: setProperty = ~~~
+jsp: getProperty = ~~~
