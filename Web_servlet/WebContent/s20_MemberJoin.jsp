@@ -1,6 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<!-- 여기서 실행 -->
+<!-- 
+s20_MemberJoin.jsp
+s20_MemberList.jsp
+위 두개 파일에서 실행!!
+-->
+<!-- 
+s20_MemberBean: 자바빈클래스
+(getter, setter)
+->useBean으로부터 한꺼번에 데이터를 받아옴
 
+s20_MemberJoin.jsp : HTML 폼 형식
+-> 전송버튼 ->s20_MemberJoinProc.jsp 페이지 이동
+
+s20_MemberJoinProc.jsp: 데이터 값들 다 받아옴
+s20_MemberDAO: DB에 대한 코드(접속, 쿼리문들...)
+                  입력한 값들을 테이블에 삽입 등 조작
+s20_MemberList.jsp: 삽입한 데이터들 폼으로 뜸
+s20_MemberIn.jsp: MemberList.jsp에서 넘긴 id를 받아줌
+	       데이터베이스에서 한 회원의 정보 가져옴
+-->
 <!DOCTYPE html>
 <html>
 <head>
