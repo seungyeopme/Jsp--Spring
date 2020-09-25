@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+  pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+  <center>
+    <h1>회원 탈퇴</h1>
+    <table width="800" border="1">
+
+      <form action="MemberDeleteProc.jsp" method="post">
+        <tr height="100">
+          <td align="center" width="150">아이디</td>
+          <td width="250"><%=request.getParameter("id")%></td>
+        </tr>
+        <tr height="100">
+          <td align="center" width="150">비밀번호</td>
+          <td width="250"><input type="password" name="pw1"></td>
+        </tr>
+        <tr height="100">
+          <td align="center" colspan="2">
+          <input type="hidden" name="id" value="<%=request.getParameter("id")%>">
+           <input type="submit" value="회원 탈퇴">
+      </form>
+           <button onclick="location.href='MemberList.jsp'">회원 전체보기</button>
+           
+            </tr>
+    </table>
+  </center>
+</body>
+</html>
