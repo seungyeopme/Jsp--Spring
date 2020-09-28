@@ -6,26 +6,33 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Vector;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
 public class MemberDAO { 
-	
+	/*
  	String id="sys as sysdba";
 	String pw="1234";
 	String url="jdbc:oracle:thin:@localhost:1521/orcl";
-	
+	*/
 	Connection con; // 디비에 접근하는 객체
 	PreparedStatement pstm; // 쿼리실행(조작)하는 객체
 	ResultSet rs; // 결과 리턴받아 자바에 저장하는 객체
 	
 	public void getCon() { // 디비 연결함수
 		try{
+			//외부(server.xml)에서 데이터 읽어들어야 함
+			Context initctx=new InitialContext();
 			
+			//톰캣 서버에 정보를 담아 놓은 곳으로 이동시킨다.
+			Context envctx=(Context)initctx.lookup("java:comp/env");
 			
-			// 오라클 jdbc 이용하겠다고 선언. 로딩하는 작업
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			// 드라이버 연결 -> db 접속
-			con=DriverManager.getConnection(url,id,pw);
+			//데이터 소스 객체 선언
+			DataSource ds=(DataSource)envctx.lookup("jdbc/pool");
 			
-			System.out.println("디비접속 성공");
+			//데이터 소스를 기준으로 연결
+			con=ds.getConnection();
 		}catch(Exception e){
 			System.out.println("디비접속에러");
 		}
