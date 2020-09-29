@@ -125,9 +125,9 @@
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
       <Context docBase="JSP" path="/JSP" reloadable="true" source="org.eclipse.jst.jee.server:JSP"/><Context docBase="Web_servlet" path="/Web_servlet" reloadable="true" source="org.eclipse.jst.jee.server:Web_servlet"/><Context docBase="Persnal" path="/Persnal" reloadable="true" source="org.eclipse.jst.jee.server:Persnal"/><Context docBase="Member" path="/Member" reloadable="true" source="org.eclipse.jst.jee.server:Member">
-      <Resource name="jdbc/pool" auth="Container" type="javax.sql.DataSource" driverClassName="oracle.jdbc.driver.OracleDriver" maxWait="5000" username="sys as sysdba" password="1234" url="jdbc:oracle:thin:@localhost:1521/orcl"/>
+      <Resource auth="Container" driverClassName="oracle.jdbc.driver.OracleDriver" maxWait="5000" name="jdbc/pool" password="1234" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521/orcl" username="sys as sysdba"/>
       </Context>
-      </Host>
+      <Context docBase="Login" path="/Login" reloadable="true" source="org.eclipse.jst.jee.server:Login"/></Host>
     </Engine>
   </Service>
 </Server>

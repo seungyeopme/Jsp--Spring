@@ -3,13 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>JSP 게시판 웹 사이트</title>
+<meta charset="UTF-8">
+<title>Insert title here</title>
 </head>
 <body>
-	<script>
-		location.href = 'login.jsp';
-	</script>
 
 </body>
 </html>
