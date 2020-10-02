@@ -3,14 +3,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<link rel="stylesheet" href="css/custom.css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>JSP 게시판 웹 사이트</title>
 </head>
 <body>
-	<script>
-		location.href = 'main.jsp';
-	</script>
-
+<%
+	session.invalidate();
+%>
+<script>
+	location.href = 'main.jsp';
+</script>
 </body>
 </html>
