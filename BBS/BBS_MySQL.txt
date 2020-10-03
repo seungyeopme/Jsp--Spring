@@ -58,3 +58,24 @@ mysql> desc user;
 | userEmail    | varchar(50) | YES  |     | NULL    |       |
 +--------------+-------------+------+-----+---------+-------+
 5 rows in set (0.00 sec)
+
+mysql> use BBS;
+
+mysql> CREATE TABLE BBS (
+    -> bbsID INT,
+    -> bbsTitle VARCHAR(50),
+    -> userID VARCHAR(20),
+    -> bbsDate DATETIME,
+    -> bbsContent VARCHAR(2048),
+    -> bbsAvailable INT,
+    -> PRIMARY KEY (bbsID)
+    -> );
+Query OK, 0 rows affected (0.19 sec)
+
+mysql> SELECT * FROM BBS;
++-------+-----------+---------+---------------------+--------------------------------+--------------+
+| bbsID | bbsTitle  | userID  | bbsDate             | bbsContent                     | bbsAvailable |
++-------+-----------+---------+---------------------+--------------------------------+--------------+
+|     1 | 첫 게시물 | gildong | 2020-10-01 17:37:48 | 2020년 10월 01일 오후 5시 37분 |            1 |
++-------+-----------+---------+---------------------+--------------------------------+--------------+
+1 row in set (0.00 sec)
