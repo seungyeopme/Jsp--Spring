@@ -153,7 +153,17 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="BBS" path="/BBS" reloadable="true" source="org.eclipse.jst.jee.server:BBS"/><Context docBase="Login" path="/Login" reloadable="true" source="org.eclipse.jst.jee.server:Login"/><Context docBase="JSP" path="/JSP" reloadable="true" source="org.eclipse.jst.jee.server:JSP"/><Context docBase="Web_servlet" path="/Web_servlet" reloadable="true" source="org.eclipse.jst.jee.server:Web_servlet"/><Context docBase="Member" path="/Member" reloadable="true" source="org.eclipse.jst.jee.server:Member"/><Context docBase="Persnal" path="/Persnal" reloadable="true" source="org.eclipse.jst.jee.server:Persnal"/></Host>
+      <Context docBase="BBS" path="/BBS" reloadable="true" source="org.eclipse.jst.jee.server:BBS"/>
+      
+      <Context docBase="JSP" path="/JSP" reloadable="true" source="org.eclipse.jst.jee.server:JSP"/>
+      <Context docBase="Web_servlet" path="/Web_servlet" reloadable="true" source="org.eclipse.jst.jee.server:Web_servlet"/>
+      <Context docBase="Member" path="/Member" reloadable="true" source="org.eclipse.jst.jee.server:Member"/>
+      <Context docBase="Persnal" path="/Persnal" reloadable="true" source="org.eclipse.jst.jee.server:Persnal"/>
+      
+      
+      
+      
+      <Context docBase="Model2-day1" path="/Model2-day1" reloadable="true" source="org.eclipse.jst.jee.server:Model2-day1"/><Context docBase="EL" path="/EL" reloadable="true" source="org.eclipse.jst.jee.server:EL"/></Host>
     </Engine>
   </Service>
 </Server>
