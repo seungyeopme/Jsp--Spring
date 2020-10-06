@@ -163,7 +163,7 @@
       
       
       
-      <Context docBase="Model2-day1" path="/Model2-day1" reloadable="true" source="org.eclipse.jst.jee.server:Model2-day1"/><Context docBase="EL" path="/EL" reloadable="true" source="org.eclipse.jst.jee.server:EL"/></Host>
+      <Context docBase="EL" path="/EL" reloadable="true" source="org.eclipse.jst.jee.server:EL"/><Context docBase="Model2" path="/Model2" reloadable="true" source="org.eclipse.jst.jee.server:Model2"/><Context docBase="MemberRegist" path="/MemberRegist" reloadable="true" source="org.eclipse.jst.jee.server:MemberRegist"/></Host>
     </Engine>
   </Service>
 </Server>
