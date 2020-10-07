@@ -8,5 +8,12 @@
 </head>
 <body>
 <h2>회원가입 페이지</h2>
+<form action="regist.member" method="post">
+	<input type="hidden" name="command" value="confirm">
+	아이디: <input type="text" name="id"><br>
+	비밀번호: <input type="text" name="pass"><br>
+	이메일: <input type="text" name="email"><br>
+	<input type="submit" value="회원가입 확인">
+</form>
 </body>
 </html>

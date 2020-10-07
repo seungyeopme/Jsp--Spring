@@ -126,3 +126,11 @@ request.getParameter("name");
 ${requestScope.name}
 
 JSTL: jsp standart tag library
+
+1. 구상->아이디어
+2. 파일(MVC)
+3. 테이블생성
+4. 커넥션풀(js:유효성 검사, css: 디자인)
+(jstl, standard, ojdbc, cos)
+-----------------------------------------
+5. 자바빈

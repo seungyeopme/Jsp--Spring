@@ -3,13 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<script>
+<script type="text/javascript">
 window.onload = function() {
 	var btn = document.getElementById("member_reg_btn");
 	btn.onclick = function() {
-		location.assign("regist.member");
+		location.assign("regist.member?command=member_form");
 	};
 };
 </script>
