@@ -1,0 +1,16 @@
+CREATE TABLE board(
+num NUMBER(20),
+name VARCHAR2(20),
+email VARCHAR2(50),
+pass VARCHAR2(30),
+title VARCHAR2(20),
+content VARCHAR2(100),
+readcount NUMBER(20),
+writedate VARCHAR2(20));
+
+
+desc board;
+select * from board;
+
+
+CREATE SEQUENCE board_seq start with 1 increment by 1;
