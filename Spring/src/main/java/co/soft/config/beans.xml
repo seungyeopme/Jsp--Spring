@@ -7,8 +7,15 @@
 
 <!-- 스프링 설정파일에 클래스를 등록하는 작업 -->
 <!-- xml을 로딩할 때 자동으로 객체가 생성된다 -->
-<bean id="hello" class='co.soft.beans.Hello1' /> 
+<!--<bean id="hello" class='co.soft.beans.Hello1' />--> 
 <bean class='co.soft.beans.Test' />
-<bean id="test1" class='co.soft.beans.Test' />
- 
-</beans>
+<bean id="test" class='co.soft.beans.Test' />
+<bean id="test2" class='co.soft.beans.Test' lazy-init="true" />
+
+<!-- xml 로딩할 때 객체가 생성되지 않는다. singleton이 아니게 됨 -->
+<bean id="test3" class='co.soft.beans.Test' scope="prototype"/>
+<bean id="t1" class="co.soft.beans.Test" lazy-init="true"/>
+<bean destroy-method="bean_destroy"
+init-method="bean_init"
+id="t1"
+class= 
