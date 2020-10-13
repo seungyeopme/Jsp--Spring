@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean id='x1' class='co.soft.beans.Test'
+lazy-init="true">
+	<constructor-arg value='200' type='int' index='0'/>
+	<constructor-arg value='bb' index='1'/>
+	<constructor-arg ref="d_1" index='2'/>
+</bean>
+
+
+<bean id='x2' class='co.soft.beans.Test'
+lazy-init='true'>
+	<property name="d1"  value='30'></property>
+	<property name="d2"  value='pp'></property>
+	<property name="d3"  ref='d_1'></property>
+	
+</bean>
+
+<bean id="d_1" class='co.soft.beans.Data'></bean>
+
+<bean id='d1' class='co.soft.beans.Data2'/>
+<bean id='d2' class='co.soft.beans.Data2'/>
+<bean id='x3' class='co.soft.beans.Test2'
+lazy-init='true' autowire='byName'/>
+
+
+<bean class ='co.soft.beans.Data3'/>
+<bean id='x4' class='co.soft.beans.Test3' 
+autowire="byType"/>
+
+</beans>

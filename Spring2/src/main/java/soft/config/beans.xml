@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean id='t1' class='soft.bean.Test'>
+	<property name="l1">
+		<list>
+			<value>one</value>
+			<value>two</value>
+			<value>three</value>
+		</list>
+	</property>
+	
+	<property name="l2">
+		<list>
+			<value type='int'>10</value>
+			<value>20</value>
+			<value>30</value>
+		</list>
+	</property>
+	
+	<property name="l3">
+		<list>
+			<bean class='soft.bean.Data'/>
+			<bean class='soft.bean.Data'/>
+				<ref bean='data_1'></ref>
+				<ref bean='data_1'></ref>
+		</list>
+	</property>
+	
+	<property name="s1">
+		<set>
+			<value>one</value>
+			<value>two</value>
+			<value>three</value>
+		</set>
+	</property>
+	
+	<property name="s2">
+		<set>
+			<value type='int'>100</value>
+			<value type='int'>3</value>
+			<value type='int'>6</value>
+		</set>
+	</property>
+	
+	<property name="s3">
+		<set>
+			<bean class='soft.bean.Data'/>
+				<ref bean='data_1'></ref> 
+		</set>
+	</property>
+	
+	
+	<property name="m1">
+		<map>
+			<entry key="a1" value="str"/>
+			<entry key="a2" value="100" value-type='int'></entry>
+			<entry key="a3">
+				<bean class='soft.bean.Data'/>
+			</entry>
+			<entry key="a4" value-ref="data_1"></entry>	
+		</map>
+	</property>
+	
+	<property name="p1">
+		<props>
+			<prop key="pp1">one</prop>
+			<prop key="pp2">one</prop>
+			<prop key="pp3">one</prop>
+		</props>
+	
+	</property>
+	
+	
+	
+	
+	
+	
+	</bean>
+
+	<bean id='data_1' class='soft.bean.Data' 
+	scope='prototype'/>
+	
+</beans>
