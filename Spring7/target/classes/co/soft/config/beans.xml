@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xmlns:aop="http://www.springframework.org/schema/aop"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans
+                       http://www.springframework.org/schema/beans/spring-beans.xsd
+                       http://www.springframework.org/schema/context
+                       http://www.springframework.org/schema/context/spring-context.xsd
+                       http://www.springframework.org/schema/aop
+                       http://www.springframework.org/schema/aop/spring-aop.xsd">
+                       
+
+<bean id="x1" class="co.soft.beans.Test" />
+<bean id="x2" class="co.soft.beans.Test2" />
+<bean id="x3" class="co.soft.beans2.Test" />
+
+<bean id="advisor1" class="co.soft.advisor.Advisor" />
+<aop:config>
+	<aop:aspect ref="advisor1">
+		<aop:pointcut expression="execution(void co.soft.beans.Test.method1())" id="po1"/>
+		<aop:pointcut expression="execution(void co.soft.beans.Test.method1(int))" id="po1"/>
+		<aop:pointcut expression="execution(void co.soft.beans.Test.method1(java.lang.String))" id="po2"/>
+		
+		<aop:pointcut expression="execution(* method1())" id="po1"/>
+		
+		<!-- 
+			Test.java aop 만들고
+		 	함수 전에 beforeMethod 출력
+		 -->
+		<aop:before method="beforeMethod" pointcut-ref="po1"/>
+		<aop:before method="beforeMethod" pointcut-ref="po2"/>
+	</aop:aspect>
+</aop:config>
+</beans>
+
+
+                       
+                       
+                       
+                       
