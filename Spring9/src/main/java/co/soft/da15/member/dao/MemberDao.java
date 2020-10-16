@@ -1,4 +1,7 @@
 package co.soft.da15.member.dao;
+
+import co.soft.da15.member.Member;
+
 //삽입
 //검색
 //수정

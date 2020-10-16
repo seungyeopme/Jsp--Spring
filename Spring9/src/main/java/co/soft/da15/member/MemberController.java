@@ -37,8 +37,8 @@ public class MemberController {
 		
 		Member member = service.search(id, pw);
 		
-		model.addAllAttributes("id", member.getId());
-		model.addAllAttributes("pw", member.getPw());
+		model.addAttribute("id", member.getId());
+		model.addAttribute("pw", member.getPw());
 		
 		return "memLoginCheck"; 
 	}

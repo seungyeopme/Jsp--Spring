@@ -18,7 +18,5 @@ public class MemberDaoA implements MemberDao {
 	public void memInsert(String id, String pw, String email) {
 	
 		Member member = new Member();
-		
-		
 	}
 }
