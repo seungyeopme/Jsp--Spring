@@ -47,3 +47,30 @@ HttpServletRequest 객체의 setAttribute()로 데이터를 등록하고 요청 
 1. Client는 URI 형식으로 웹 서비스에 요청을 보낸다.
 2. Mapping 되는 Handler를 찾는 DispatcherServlet이 요청을 인터셉트한다. 
 3. Controller가 요청을 처리한 후에 응답을 DispatcherServlet으로 반환하고 DispatcherServlet은 View를 사용자에게 반환한다.
+
+servlet/jsp url주소: 사용자가 서버에 접속해서 서비스를 받기 위해 입력하는 주소
+
+도메인 주소: 포트번호/경로1/경로2
+servlet/jsp에서 첫번째 경로는 Context Path라고 부른다.
+Context Path는하나의 서버에서 각 웹 애플리케이션을 구분하기 위해 지정되는 이름이며 
+그 이후경로는 하위 경로이다.
+
+1. HttpServletRequest
+: Spring MVC에서 HttpServletRequest객체를 주입 받아 사용가능
+
+2. WebRequest
+: HttpServletRequest클래스를 확장한 클래스
+
+3. @PathVariable
+: 데이터가 요청 주소에 있을 경우 값을 주입 받을 수 있는 어노테이션
+
+@GetMapping("/t1/{d1}/{d2}/{d3}")
+public String t1(@PathVariable int d1,
+	        @PathVariable int d2,
+	        @PathVariable int d3) } { }
+
+4. @RequestParam
+: 지정된 변수 이름과 파라미터 이름이 같을 경우 값을 주입 받는다.
+
+public String t1(@RequestParam(value="d1", required) int n1,
+			

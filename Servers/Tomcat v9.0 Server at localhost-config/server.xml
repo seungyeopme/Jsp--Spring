@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Param" path="/Param" reloadable="true" source="org.eclipse.jst.jee.server:Param"/><Context docBase="Spring10" path="/SpringJava" reloadable="true" source="org.eclipse.jst.jee.server:Spring10"/><Context docBase="BBS" path="/BBS" reloadable="true" source="org.eclipse.jst.jee.server:BBS"/><Context docBase="Spring11" path="/config" reloadable="true" source="org.eclipse.jst.jee.server:Spring11"/></Host>
+      <Context docBase="Param" path="/Param" reloadable="true" source="org.eclipse.jst.jee.server:Param"/><Context docBase="Spring10" path="/SpringJava" reloadable="true" source="org.eclipse.jst.jee.server:Spring10"/><Context docBase="Spring11" path="/config" reloadable="true" source="org.eclipse.jst.jee.server:Spring11"/><Context docBase="BoardWeb" path="/biz" reloadable="true" source="org.eclipse.jst.jee.server:BoardWeb"/><Context docBase="mvc2" path="/mvc2" reloadable="true" source="org.eclipse.jst.jee.server:mvc2"/><Context docBase="Sy1" path="/sw1" reloadable="true" source="org.eclipse.jst.jee.server:Sy1"/><Context docBase="Spring8" path="/com" reloadable="true" source="org.eclipse.jst.jee.server:Spring8"/></Host>
     </Engine>
   </Service>
 </Server>
