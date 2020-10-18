@@ -10,16 +10,66 @@
 
 <context:component-scan base-package="com.springbook.biz" />
 
-<bean id="before" class="com.springbook.biz.common.BeforeAdvice"></bean>
+
+</beans>
+<!-- 
+<bean id="around"
+	class="com.springbook.biz.common.AroundAdvice"></bean>
+
+<aop:config>
+	<aop:pointcut id="allPointcut"
+				  expression="execution(* com.springbook.biz..*Impl.*(..))" />
+	
+	<aop:aspect ref="around">
+		<aop:around pointcut-ref="allPointcut" method="aroundLog" />
+	</aop:aspect>
+</aop:config>
+-->
+<!-- 
+<bean id="afterThrowing"
+	class="com.springbook.biz.common.AfterThrowingAdvice"></bean>
+
+<aop:config>
+	<aop:pointcut id="allPointcut"
+				  expression="execution(* com.springbook.biz..*Impl.*(..))" />
+	
+	<aop:aspect ref="afterThrowing">
+		<aop:after-throwing pointcut-ref="allPointcut" method="exceptionLog"
+							 throwing="exceptObj" />
+	</aop:aspect>
+</aop:config>
+-->
+<!-- 
+<bean id="afterReturning"
+	class="com.springbook.biz.common.AfterReturningAdvice"></bean>
+<aop:config>
+	<aop:pointcut id="getPointcut"
+				  expression="execution(* com.springbook.biz..*Impl.get*(..))" />
+	
+	<aop:aspect ref="afterReturning">
+		<aop:after-returning pointcut-ref="getPointcut" method="afterLog"
+							 returning="returnObj" />
+	</aop:aspect>
+</aop:config>
+-->
+<!-- 
+<bean id="before" class="com.springbook.biz.common.BeforeAdvice" />
 
 <aop:config>
 	<aop:pointcut id="allPointcut" 
 				  expression="execution(* com.springbook.biz..*Impl.*(..))"/>
+	
 	<aop:aspect ref="before"> 
 		<aop:before pointcut-ref="allPointcut" method="beforeLog"/>
 	</aop:aspect>
 </aop:config>
-</beans>
+-->
+<!-- <bean id="around" class="com.springbook.biz.common.AroundAdvice" /> -->
+<!-- 
+<bean id="afterThrowing" class="com.springbook.biz.common.AfterThrowingAdvice" />
+<bean id="after" class="com.springbook.biz.common.AfterAdvice" /> 
+-->
+<!-- <bean id="before" class="com.springbook.biz.common.BeforeAdvice"></bean> -->
 <!--    
 <bean id="userService" class="com.springbook.biz.user.impl.UserServiceImpl">
 	<property name="userDAO" ref="userDAO" />
