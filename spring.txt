@@ -112,3 +112,20 @@ viewresolver가 사용한 데이터를 request영역에 저장할 수 있다.
 <form: 태그명>
 => Model 객체에 들어있는 값을 form 요소에 주입시킬 수 있다.
 => 수정 페이지를 구성할 때 잘 쓰인다.
+
+@RequestMapping
+ModelAndView클래스
+setViewName
+addObject
+
+public ModelAndView add(@RequestParam(value="n1")int n1,
+
+/sub1/t3
+
+HttpServletRequest
+WebRequest
+@RequestParam(value)
+@PathVariable
+
+form custom tag
+<form:select path="a">
