@@ -11,6 +11,9 @@
 <context:component-scan base-package="com.springbook.biz" />
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 
+
+</beans>
+<!-- 
 <aop:config>
 	<aop:pointcut id="allPointcut"
 				  expression="execution(* com.springbook.biz..*Impl.*(..))" />
@@ -22,7 +25,7 @@
 		<aop:before pointcut-ref="allPointcut" method="printLog" />
 	</aop:aspect>
 </aop:config>
-</beans>
+-->
 
 <!-- <aop:aspectj-autoproxy></aop:aspectj-autoproxy> -->
 <!-- 
