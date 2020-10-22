@@ -10,7 +10,7 @@ public class JDBCUtil {
 		try {
 			Class.forName("org.h2.Driver");
 			return DriverManager.getConnection("jdbc:h2:tcp://localhost/~/test", "sa", "");
-		} catch (Exception e) {
+		} catch (Exception e) {                                                                                                                                                     
 			e.printStackTrace();
 		}
 		return null;
