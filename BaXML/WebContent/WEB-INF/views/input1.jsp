@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<title>Insert title here</title>
 </head>
 <body>
-	<a href="t1">controller</a><br>
-	<a href="t2">rest</a><br>
+	<h3>끝</h3>
 </body>
 </html>

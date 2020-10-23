@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<title>Insert title here</title>
 </head>
 <body>
-	<a href="t1">controller</a><br>
-	<a href="t2">rest</a><br>
+	<a href="input">input</a><br>
+	<a href="result">result</a><br>
 </body>
 </html>
