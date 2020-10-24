@@ -10,10 +10,12 @@ import org.springframework.stereotype.Service;
 @Aspect
 public class BeforeAdvice {
 	
-	@Pointcut("execution(* com.springbook.biz..*Impl.*(..))")
-	public void allPointcut() {}
+//	@Pointcut("execution(* com.springbook.biz..*Impl.*(..))")
+//	public void allPointcut() {}
 	
-	@Before("allPointcut()")
+	
+//	@Before("allPointcut()")
+	@Before("PointcutCommon.allPointcut()")
 	public void beforeLog(JoinPoint jp) {
 		//System.out.println("[사전 처리] 비즈니스 로직 수행 전 동작");
 		String method = jp.getSignature().getName();

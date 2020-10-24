@@ -1,5 +1,0 @@
-create table spring(
-	s1 varchar2(20) not null,
-	s2 varchar2(20) not null,
-	s3 varchar2(20) not null
-);
