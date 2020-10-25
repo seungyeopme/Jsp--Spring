@@ -3,19 +3,14 @@ package com.springbook.biz.common;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StopWatch;
 
 @Service
 @Aspect
 public class AroundAdvice {
-	
-	@Pointcut("execution(* com.springbook.biz..*Impl.*(..))")
-	public void allPointcut() {
-	}
-	
-	@Around("allPointcut()")
+
+	@Around("PointcutCommon.allPointcut()")//@Around("allPointcut()")
 	public Object aroundLog(ProceedingJoinPoint pjp) throws Throwable {
 		String method = pjp.getSignature().getName();
 		
@@ -30,6 +25,9 @@ public class AroundAdvice {
 		return obj;
 	}
 }
+//@Pointcut("execution(* com.springbook.biz..*Impl.*(..))")
+//public void allPointcut() {
+//}
 	/*
 	 * public Object aroundLog(ProceedingJoinPoint pjp) throws Throwable {
 	 * System.out.println("[BEFORE]: 비즈니스 메소드 수행 전에 처리할 내용..."); Object returnObj =
