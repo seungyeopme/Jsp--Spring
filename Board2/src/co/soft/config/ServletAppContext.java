@@ -125,8 +125,8 @@ public class ServletAppContext implements WebMvcConfigurer{
 		return res;
 	}
 	
-	@Bean
-	public static PropertyPlaceholderConfigurer pr() {
-		return new PropertyPlaceholderConfigurer();
-	}
+//	@Bean
+//	public static PropertyPlaceholderConfigurer pr() {
+//		return new PropertyPlaceholderConfigurer();
+//	}
 }
