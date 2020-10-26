@@ -11,15 +11,18 @@
 	</button>
 	<div class="collapse navbar-collapse" id="navMenu">
 		<ul class="navbar-nav">
-			
-			<c:forEach var='obj' items='${topmenu}'>
 			<li class="nav-item">
-				<a href="${root }board/main?board_idx=${obj.board_idx}" class="nav-link">
-				
-				${obj.board_name}</a>
+				<a href="${root }board/main" class="nav-link">자유게시판</a>
 			</li>
-			</c:forEach>
-
+			<li class="nav-item">
+				<a href="${root }board/main" class="nav-link">스프링게시판</a>
+			</li>
+			<li class="nav-item">
+				<a href="${root }board/main" class="nav-link">데이터베이스게시판</a>
+			</li>
+			<li class="nav-item">
+				<a href="${root }board/main" class="nav-link">HTML/CSS게시판</a>
+			</li>
 		</ul>
 		
 		<ul class="navbar-nav ml-auto">
