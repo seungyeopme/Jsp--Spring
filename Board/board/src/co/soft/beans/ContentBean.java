@@ -7,7 +7,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class ContentBean {
 	private int content_idx;
 	
-	@NotBlank //@NotEmpty 는 null 과 "" 과 " " 모두 허용하지 않습니다.
+	@NotBlank
 	private String content_subject;
 	
 	@NotBlank

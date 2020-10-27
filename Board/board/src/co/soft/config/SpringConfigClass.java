@@ -44,28 +44,28 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 //}
 
 public class SpringConfigClass extends AbstractAnnotationConfigDispatcherServletInitializer{
-	
+	// DispatcherServlet�뿉 留ㅽ븨�븷 �슂泥� 二쇱냼瑜� �뀑�똿�븳�떎.
 	@Override
 	protected String[] getServletMappings() {
 		// TODO Auto-generated method stub
 		return new String[] {"/"};
 	}
 	
-	
+	// Spring MVC �봽濡쒖젥�듃 �꽕�젙�쓣 �쐞�븳 �겢�옒�뒪瑜� 吏��젙�븳�떎.
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
 		// TODO Auto-generated method stub
 		return new Class[] {ServletAppContext.class};
 	}
 	
-	
+	// �봽濡쒖젥�듃�뿉�꽌 �궗�슜�븷 Bean�뱾�쓣 �젙�쓽湲� �쐞�븳 �겢�옒�뒪瑜� 吏��젙�븳�떎.
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		// TODO Auto-generated method stub
 		return new Class[] {RootAppContext.class};
 	}
 	
-
+	// �뙆�씪誘명꽣 �씤肄붾뵫 �븘�꽣 �꽕�젙
 	@Override
 	protected Filter[] getServletFilters() {
 		// TODO Auto-generated method stub
