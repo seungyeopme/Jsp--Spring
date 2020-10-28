@@ -18,5 +18,4 @@ public class TopMenuService {
 		List<BoardInfoBean> topMenuList = topMenuDao.getTopMenuList();
 		return topMenuList;
 	}
-	
 }
