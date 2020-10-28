@@ -1,21 +1,37 @@
 package com.springbook.ioc.injection;
 
-import java.util.List;
-import java.util.Map;
 import java.util.Properties;
 
 public class CollectionBean {
-	private Properties addressList;
-	
-	public void setAddressList(Properties addressList) {
-		this.addressList = addressList;
+	private Properties mappings;
+
+	public void setAddressList(Properties mappings) {
+		this.mappings = mappings;
 	}
 
-	public List<String> getAddressList() {
-		// TODO Auto-generated method stub
-		return null;
+	public Properties getAddressList() {
+		return mappings;
 	}
 }
+
+//package com.springbook.ioc.injection;
+//
+//import java.util.List;
+//import java.util.Map;
+//import java.util.Properties;
+//
+//public class CollectionBean {
+//	private Properties addressList;
+//	
+//	public void setAddressList(Properties addressList) {
+//		this.addressList = addressList;
+//	}
+//
+//	public List<String> getAddressList() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//}
 /*
 public Set<String> getAddressList() {
 	return addressList;
