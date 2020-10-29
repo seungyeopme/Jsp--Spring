@@ -6,34 +6,37 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>ê¸€ ëª©ë¡</title>
+<title>±Û ¸ñ·Ï</title>
 </head>
 <body>
 	<center>
-		<h1>ê¸€ ëª©ë¡</h1>
-		<h3>
-			í…ŒìŠ¤íŠ¸ë‹˜ í™˜ì˜í•©ë‹ˆë‹¤...<a href="logout.do">Log-out</a>
+		<h1>±Û ¸ñ·Ï</h1>
+		<h3>${userName }´Ô!
+			°Ô½ÃÆÇ¿¡ ¿À½Å°É È¯¿µÇÕ´Ï´Ù...<a href="logout.do">Log-out</a>
 		</h3>
-		<!-- ê²€ìƒ‰ ì‹œìž‘ -->
-		<form action="getBoardList.jsp" method="post">
+		<!-- °Ë»ö ½ÃÀÛ -->
+		<form action="getBoardList.do" method="post">
 			<table border="1" cellpadding="0" cellspacing="0" width="700">
 				<tr>
-					<td align="right"><select name="searchCondition">
-							<option value="TITLE">ì œëª©
-							<option value="CONTENT">ë‚´ìš©
-					</select> <input name="searchKeyword" type="text" /> <input type="submit"
-						value="ê²€ìƒ‰" /></td>
+					<td align="right">
+					<select name="searchCondition">
+						<c:forEach items="${conditionMap }" var="option">
+							<option value="${option.value }">${option.key }
+						</c:forEach>							
+					</select> 
+					<input name="searchKeyword" type="text" /> 
+					<input type="submit" value="°Ë»ö" /></td>
 				</tr>
 			</table>
 		</form>
-		<!-- ê²€ìƒ‰ ì¢…ë£Œ -->
+		<!-- °Ë»ö Á¾·á -->
 		<table border="1" cellpadding="0" cellspacing="0" width="700">
 			<tr>
-				<th bgcolor="orange" width="100">ë²ˆí˜¸</th>
-				<th bgcolor="orange" width="200">ì œëª©</th>
-				<th bgcolor="orange" width="150">ìž‘ì„±ìž</th>
-				<th bgcolor="orange" width="150">ë“±ë¡ì¼</th>
-				<th bgcolor="orange" width="100">ì¡°íšŒìˆ˜</th>
+				<th bgcolor="orange" width="100">¹øÈ£</th>
+				<th bgcolor="orange" width="200">Á¦¸ñ</th>
+				<th bgcolor="orange" width="150">ÀÛ¼ºÀÚ</th>
+				<th bgcolor="orange" width="150">µî·ÏÀÏ</th>
+				<th bgcolor="orange" width="100">Á¶È¸¼ö</th>
 			</tr>
 			<c:forEach items="${boardList }" var="board">
 				<tr>
@@ -46,7 +49,7 @@
 				</tr>
 			</c:forEach>
 		</table>
-		<br> <a href="insertBoard.jsp">ìƒˆê¸€ ë“±ë¡</a>
+		<br> <a href="insertBoard.jsp">»õ±Û µî·Ï</a>
 	</center>
 </body>
 </html>
