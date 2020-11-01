@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="com.rubypaper.AppTest" time="0.004" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="com.rubypaper.AppTest" time="0.005" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_261\jre\bin"/>
@@ -27,7 +27,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\sys03\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf3180925542600259633.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\sys03\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf4920516138977953482.tmp"/>
     <property name="sun.jnu.encoding" value="MS949"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_261\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk1.8.0_261/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_261/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_261/bin/../jre/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Users\sys03\Downloads\WINDOWS.X64_180000_db_home\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_261\bin;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\sys03\AppData\Local\Microsoft\WindowsApps;;C:\Users\sys03\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\sys03\AppData\Roaming\npm;C:\Users\sys03\Desktop;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -61,5 +61,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.rubypaper.AppTest" name="shouldAnswerWithTrue" time="0.004"/>
+  <testcase classname="com.rubypaper.AppTest" name="shouldAnswerWithTrue" time="0.005"/>
 </testsuite>
