@@ -1,0 +1,2 @@
+2020:11:02 13:19:06.591 WARN  --- [restartedMain] com.rubypaper.LoggingRunner : WARN 로그 메시지 
+2020:11:02 13:19:06.591 ERROR --- [restartedMain] com.rubypaper.LoggingRunner : ERROR 로그 메시지 
