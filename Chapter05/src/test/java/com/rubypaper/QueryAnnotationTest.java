@@ -22,16 +22,16 @@ public class QueryAnnotationTest {
 	@Autowired
 	private BoardRepository boardRepo;
 	
-	@Test
-	public void testQueryAnnotationTest4() {
-		Pageable paging = PageRequest.of(0, 3, Sort.Direction.DESC, "seq");
-		List<Board> boardList = boardRepo.queryAnnotationTest4(paging);
-				
-		System.out.println("검색 결과");
-		for (Board board : boardList) {
-			System.out.println("---> " + board.toString());
-		}
-	}
+//	@Test
+//	public void testQueryAnnotationTest4() {
+//		Pageable paging = PageRequest.of(0, 3, Sort.Direction.DESC, "seq");
+//		List<Board> boardList = boardRepo.queryAnnotationTest4(paging);
+//				
+//		System.out.println("검색 결과");
+//		for (Board board : boardList) {
+//			System.out.println("---> " + board.toString());
+//		}
+//	}
 }
 
 /*@Query 어노테이션 사용하기*/

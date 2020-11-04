@@ -1,10 +1,8 @@
-/*@Query 어노테이션 사용하기*/
-/*/src/test/java/com/rubypaper/QueryAnnotationTest에서 실행*/
-/*페이징 및 정렬 처리하기*/
 package com.rubypaper.persistence;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -12,9 +10,32 @@ import org.springframework.data.repository.CrudRepository;
 import com.rubypaper.domain.Board;
 
 public interface BoardRepository extends CrudRepository<Board, Long> {
-	@Query("SELECT b FROM Board b ORDER BY b.seq DESC")
-	List<Board> queryAnnotationTest4(Pageable paging);
+	List<Board> findByTitle(String title);
+	List<Board> findByContentContaining(String searchKeyword);
+	List<Board> findByTitleContainingOrContentContaining(String title, String content);
+//	List<Board> findByTitleContaingOrderBySeqDesc(String searchKeyword);
+	Page<Board> findByTitleContaining(String searchKeyword, Pageable paging);
+	
+	
 }
+
+/*@Query 어노테이션 사용하기*/
+/*/src/test/java/com/rubypaper/QueryAnnotationTest에서 실행*/
+/*페이징 및 정렬 처리하기*/
+//package com.rubypaper.persistence;
+//
+//import java.util.List;
+//
+//import org.springframework.data.domain.Pageable;
+//import org.springframework.data.jpa.repository.Query;
+//import org.springframework.data.repository.CrudRepository;
+//
+//import com.rubypaper.domain.Board;
+//
+//public interface BoardRepository extends CrudRepository<Board, Long> {
+//	@Query("SELECT b FROM Board b ORDER BY b.seq DESC")
+//	List<Board> queryAnnotationTest4(Pageable paging);
+//}
 
 /*@Query 어노테이션 사용하기*/
 /*/src/test/java/com/rubypaper/QueryAnnotationTest에서 실행*/
