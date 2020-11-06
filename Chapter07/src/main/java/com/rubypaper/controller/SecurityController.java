@@ -1,4 +1,3 @@
-/*접근 권한 없음 페이지 처리*/
 package com.rubypaper.controller;
 
 import org.springframework.stereotype.Controller;
@@ -27,7 +26,7 @@ public class SecurityController {
 	public void forAdmin() {
 		System.out.println("Admin 요청입니다.");
 	}
-	
+
 	@GetMapping("/login")
 	public void login() {
 	}
@@ -39,73 +38,5 @@ public class SecurityController {
 	@GetMapping("/accessDenied")
 	public void accessDenied() {		
 	}
+
 }
-
-/*loginPage() 메소드 추가*/
-//package com.rubypaper.controller;
-//
-//import org.springframework.stereotype.Controller;
-//import org.springframework.web.bind.annotation.GetMapping;
-//
-//@Controller
-//public class SecurityController {
-//
-//	@GetMapping("/")
-//	public String index() {
-//		System.out.println("index 요청입니다.");
-//		return "index";
-//	}
-//
-//	@GetMapping("/member")
-//	public void forMember() {
-//		System.out.println("Member 요청입니다.");
-//	}
-//
-//	@GetMapping("/manager")
-//	public void forManager() {
-//		System.out.println("Manager 요청입니다.");
-//	}
-//
-//	@GetMapping("/admin")
-//	public void forAdmin() {
-//		System.out.println("Admin 요청입니다.");
-//	}
-//	
-//	@GetMapping("/login")
-//	public void login() {
-//	}
-//
-//	@GetMapping("/loginSuccess")
-//	public void loginSuccess() {
-//	}
-//}
-
-//package com.rubypaper.controller;
-//
-//import org.springframework.stereotype.Controller;
-//import org.springframework.web.bind.annotation.GetMapping;
-//
-//@Controller
-//public class SecurityController {
-//
-//	@GetMapping("/")
-//	public String index() {
-//		System.out.println("index 요청입니다.");
-//		return "index";
-//	}
-//
-//	@GetMapping("/member")
-//	public void forMember() {
-//		System.out.println("Member 요청입니다.");
-//	}
-//
-//	@GetMapping("/manager")
-//	public void forManager() {
-//		System.out.println("Manager 요청입니다.");
-//	}
-//
-//	@GetMapping("/admin")
-//	public void forAdmin() {
-//		System.out.println("Admin 요청입니다.");
-//	}
-//}
